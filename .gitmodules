@@ -1,0 +1,3 @@
+[submodule "BaseVersion"]
+	path = BaseVersion
+	url = https://github.com/yahyaPoursoltani/base-project-for-solid.git
