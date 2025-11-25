@@ -8,7 +8,7 @@ public class ReservationService {
     private PaymentProcessor paymentProcessor = new PaymentProcessor();
 
     public void makeReservation(Reservation res, PaymentMethods paymentType, Notifier notifier){
-                        
+        this.notifier = notifier;
         System.out.println("Processing reservation for " + res.customer.name);
 
         if(res.customer.city.equals("Paris")){
@@ -49,6 +49,7 @@ public class ReservationService {
            case SMS :
            SmsSender smsSender = new SmsSender();
            smsSender.send(res.customer.mobile, "Your reservation confirmed!");
+           break;
            default:
                System.out.println("There is no Message Provider");
        }

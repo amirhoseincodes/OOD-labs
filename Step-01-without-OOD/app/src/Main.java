@@ -24,6 +24,6 @@ public class Main {
         Reservation res2 = new Reservation(room2,customer2,1); // و رزرو جدید 
         
         // از همان سرویس رزرو قبلی استفاده می کنیم
-        service.makeReservation(res2, PaymentMethods.INPERSON, Notifier.EMAIL);
+        service.makeReservation(res2, PaymentMethods.INPERSON, Notifier.SMS);
     }
 }

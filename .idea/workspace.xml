@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1f3f380-752a-4e31-8b7c-fe873ebea4fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/MessageSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/EmailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/EmailSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/MessageSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/MessageSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +22,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="35xjP4pHbXTXRYht1YXgSYhxLQA" />
   <component name="ProjectViewState">
@@ -37,6 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1764058589502</updated>
       <workItem from="1764058590869" duration="3982000" />
+      <workItem from="1764080711617" duration="1172000" />
+      <workItem from="1764081911849" duration="110000" />
     </task>
     <servers />
   </component>
