@@ -44,8 +44,11 @@ public class ReservationService {
        switch (this.notifier){
            case EMAIL :
            EmailSender emailSender = new EmailSender();
-           emailSender.sendEmail(res.customer.email, "Your reservation confirmed!");
+           emailSender.send(res.customer.email, "Your reservation confirmed!");
            break;
+           case SMS :
+           SmsSender smsSender = new SmsSender();
+           smsSender.send(res.customer.mobile, "Your reservation confirmed!");
            default:
                System.out.println("There is no Message Provider");
        }
