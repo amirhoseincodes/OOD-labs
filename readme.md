@@ -28,7 +28,7 @@
 
 کد اولیه پروژه از لینک زیر قابل دریافت است:
 
-> **github.com/yahyaPoursoltani/base-project-for-solid/tree/master**
+> **https://github.com/yahyaPoursoltani/base-project-for-solid/tree/master**
 
 ---
 
