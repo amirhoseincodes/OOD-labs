@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a1f3f380-752a-4e31-8b7c-fe873ebea4fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/DiscountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/DiscountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/IDiscountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/IDiscountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/INotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/INotificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/InvoicePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/InvoicePrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +72,7 @@
       <workItem from="1764080711617" duration="1172000" />
       <workItem from="1764081911849" duration="110000" />
       <workItem from="1764703796936" duration="569000" />
-      <workItem from="1764925140899" duration="4502000" />
+      <workItem from="1764925140899" duration="5236000" />
     </task>
     <servers />
   </component>

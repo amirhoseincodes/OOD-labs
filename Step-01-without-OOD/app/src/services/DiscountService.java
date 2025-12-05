@@ -1,17 +1,17 @@
 package services;
 
-import models.Customer;
-import models.Room;
-
 public class DiscountService implements IDiscountService {
-    public void applyDiscount(Customer customer, Room room) {
-        if ("Paris".equals(customer.getCity())) {
+    @Override
+    public void applyDiscount(Reservation res) {
+        String city = res.getCustomerCity();
+
+        if ("Paris".equals(city)) {
             System.out.println("Apply city discount for Paris!");
-            room.setPrice(room.getPrice() * 0.9);
+            res.applyRoomPrice(res.getRoomPrice() * 0.9);
         }
-        if ("Amirabad".equals(customer.getCity())) {
+        if ("Amirabad".equals(city)) {
             System.out.println("Apply city discount for Amirabad!");
-            room.setPrice(room.getPrice() * 0.5);
+            res.applyRoomPrice(res.getRoomPrice() * 0.5);
         }
     }
 }
