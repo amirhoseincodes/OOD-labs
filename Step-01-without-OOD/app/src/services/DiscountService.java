@@ -3,7 +3,7 @@ package services;
 import models.Customer;
 import models.Room;
 
-public class DiscountService {
+public class DiscountService implements IDiscountService {
     public void applyDiscount(Customer customer, Room room) {
         if ("Paris".equals(customer.getCity())) {
             System.out.println("Apply city discount for Paris!");

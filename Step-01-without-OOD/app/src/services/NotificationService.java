@@ -3,12 +3,13 @@ package services;
 import constants.Notifier;
 import models.Customer;
 
-public class NotificationService {
+public class NotificationService implements INotificationService {
     private MessageSender getSender(Notifier notifier) {
-        return switch (notifier) {
-            case EMAIL -> new EmailSender();
-            case SMS -> new SmsSender();
-        };
+        switch (notifier) {
+            case EMAIL: return new EmailSender();
+            case SMS: return new SmsSender();
+            default: throw new IllegalArgumentException("Unsupported notifier: " + notifier);
+        }
     }
 
     public void sendNotification(Notifier notifier, Customer customer) {

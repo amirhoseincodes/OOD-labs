@@ -1,8 +1,6 @@
 package services;
 
-import services.Reservation;
-
-public class InvoicePrinter {
+public class InvoicePrinter implements IInvoicePrinter {
     public void printInvoice(Reservation res) {
         System.out.println("----- INVOICE -----");
         System.out.println("hotel.Customer: " + res.customer.getName());
