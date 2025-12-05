@@ -5,13 +5,13 @@ import models.Room;
 
 public class DiscountService {
     public void applyDiscount(Customer customer, Room room) {
-        if (customer.city.equals("Paris")) {
+        if ("Paris".equals(customer.getCity())) {
             System.out.println("Apply city discount for Paris!");
-            room.price *= 0.9;
+            room.setPrice(room.getPrice() * 0.9);
         }
-        if (customer.city.equals("Amirabad")) {
+        if ("Amirabad".equals(customer.getCity())) {
             System.out.println("Apply city discount for Amirabad!");
-            room.price *= 0.5;
+            room.setPrice(room.getPrice() * 0.5);
         }
     }
 }

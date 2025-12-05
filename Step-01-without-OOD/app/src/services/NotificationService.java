@@ -4,16 +4,16 @@ import constants.Notifier;
 import models.Customer;
 
 public class NotificationService {
+    private MessageSender getSender(Notifier notifier) {
+        return switch (notifier) {
+            case EMAIL -> new EmailSender();
+            case SMS -> new SmsSender();
+        };
+    }
+
     public void sendNotification(Notifier notifier, Customer customer) {
-        switch (notifier) {
-            case EMAIL:
-                new EmailSender().send(customer.email, "Your reservation confirmed!");
-                break;
-            case SMS:
-                new SmsSender().send(customer.mobile, "Your reservation confirmed!");
-                break;
-            default:
-                System.out.println("There is no Message Provider");
-        }
+        MessageSender sender = getSender(notifier);
+        String to = notifier == Notifier.EMAIL ? customer.getEmail() : customer.getMobile();
+        sender.send(to, "Your reservation confirmed!");
     }
 }

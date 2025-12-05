@@ -1,5 +1,5 @@
 package services;
 
 public interface MessageSender {
-    public void send(String to, String message);
+    void send(String to, String message);
 }

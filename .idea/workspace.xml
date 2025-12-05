@@ -4,7 +4,20 @@
     <list default="true" id="a1f3f380-752a-4e31-8b7c-fe873ebea4fd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/constants/PaymentMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/constants/PaymentMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/LuxuryRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/LuxuryRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/PoorRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/PoorRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/DiscountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/DiscountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/EmailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/InvoicePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/InvoicePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/MessageSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/PaymentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/SmsSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Step-01-without-OOD/app/src/services/SmsSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +80,7 @@
       <workItem from="1764080711617" duration="1172000" />
       <workItem from="1764081911849" duration="110000" />
       <workItem from="1764703796936" duration="569000" />
-      <workItem from="1764925140899" duration="878000" />
+      <workItem from="1764925140899" duration="3237000" />
     </task>
     <servers />
   </component>
