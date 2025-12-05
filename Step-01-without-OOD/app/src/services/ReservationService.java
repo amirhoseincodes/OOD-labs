@@ -4,23 +4,19 @@ import constants.Notifier;
 import constants.PaymentMethods;
 
 public class ReservationService {
-    private Notifier notifier = Notifier.EMAIL; //default Notifier
     private PaymentProcessor paymentProcessor = new PaymentProcessor();
+    private DiscountService discountService = new DiscountService();
+    private InvoicePrinter invoicePrinter = new InvoicePrinter();
+    private NotificationService notificationService = new NotificationService();
 
-    public void makeReservation(Reservation res, PaymentMethods paymentType, Notifier notifier){
-        this.notifier = notifier;
+    public void makeReservation(Reservation res, PaymentMethods paymentType, Notifier notifier) {
         System.out.println("Processing reservation for " + res.customer.name);
 
-        if(res.customer.city.equals("Paris")){
-            System.out.println("Apply city discount for Paris!");
-            res.room.price *= 0.9;
-        }
-        if(res.customer.city.equals("Amirabad")){
-            System.out.println("Apply city discount for Amirabad!");
-            res.room.price *= 0.5;
-        }
 
-        switch (paymentType){
+        discountService.applyDiscount(res.customer, res.room);
+
+
+        switch (paymentType) {
             case CARD:
                 paymentProcessor.payByCard(res.totalPrice());
                 break;
@@ -35,23 +31,10 @@ public class ReservationService {
                 break;
         }
 
-        System.out.println("----- INVOICE -----");
-        System.out.println("hotel.Customer: " + res.customer.name);
-        System.out.println("hotel.Room: " + res.room.number + " (" + res.room.type + ")");
-        System.out.println("Total: " + res.totalPrice());
-        System.out.println("-------------------");
 
-       switch (this.notifier){
-           case EMAIL :
-           EmailSender emailSender = new EmailSender();
-           emailSender.send(res.customer.email, "Your reservation confirmed!");
-           break;
-           case SMS :
-           SmsSender smsSender = new SmsSender();
-           smsSender.send(res.customer.mobile, "Your reservation confirmed!");
-           break;
-           default:
-               System.out.println("There is no Message Provider");
-       }
+        invoicePrinter.printInvoice(res);
+
+
+        notificationService.sendNotification(notifier, res.customer);
     }
 }

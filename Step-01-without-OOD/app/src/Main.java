@@ -18,12 +18,12 @@ public class Main {
 
         System.out.println(); 
         
-        // نمونه استفاده از قابلیت های جدید
-        Customer customer2 = new Customer("Amir", "amir@amirabad.com","09102031510","Amirabad"); //شخص جدید
-        Room room2 = new PoorRoom("108",80); // اتاق جدید
-        Reservation res2 = new Reservation(room2,customer2,1); // و رزرو جدید 
+
+        Customer customer2 = new Customer("Amir", "amir@amirabad.com","09102031510","Amirabad");
+        Room room2 = new PoorRoom("108",80);
+        Reservation res2 = new Reservation(room2,customer2,1);
         
-        // از همان سرویس رزرو قبلی استفاده می کنیم
+
         service.makeReservation(res2, PaymentMethods.INPERSON, Notifier.SMS);
     }
 }
