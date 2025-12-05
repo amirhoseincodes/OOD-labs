@@ -14,6 +14,6 @@ public class Reservation {
         this.nights = nights;
     }
     public double totalPrice(){
-        return room.price * nights;
+        return room.getPrice() * nights; // از getter استفاده می کنیم
     }
 }

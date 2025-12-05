@@ -5,7 +5,8 @@ import constants.PaymentMethods;
 
 public class ReservationService {
     private Notifier notifier = Notifier.EMAIL; //default Notifier
-    private PaymentProcessor paymentProcessor = new PaymentProcessor();
+    private PaymentProcessor paymentProcessor ; // در نسخه جدید چون اینترفیس هست new نداریم. 
+    // private PaymentProcessor paymentProcessor = new PaymentProcessor();
 
     public void makeReservation(Reservation res, PaymentMethods paymentType, Notifier notifier){
         this.notifier = notifier;
@@ -13,31 +14,39 @@ public class ReservationService {
 
         if(res.customer.city.equals("Paris")){
             System.out.println("Apply city discount for Paris!");
-            res.room.price *= 0.9;
+           res.room.setPrice(res.room.getPrice() * 0.9);
         }
         if(res.customer.city.equals("Amirabad")){
             System.out.println("Apply city discount for Amirabad!");
-            res.room.price *= 0.5;
+            res.room.setPrice(res.room.getPrice()* 0.5);
         }
 
         switch (paymentType){
             case CARD:
-                paymentProcessor.payByCard(res.totalPrice());
+                paymentProcessor = new CardPayment();
+                paymentProcessor.pay(res.totalPrice());
+                // paymentProcessor.payByCard(res.totalPrice());
                 break;
             case PAYPAL:
-                paymentProcessor.payByPayPal(res.totalPrice());
+                paymentProcessor = new PayPalPayment();
+                paymentProcessor.pay(res.totalPrice());
+                // paymentProcessor.payByPayPal(res.totalPrice());
                 break;
             case CASH:
-                paymentProcessor.payByCash(res.totalPrice());
+                paymentProcessor = new CashPayment();
+                paymentProcessor.pay(res.totalPrice());
+                // paymentProcessor.payByCash(res.totalPrice());
                 break;
             case INPERSON:
-                paymentProcessor.payInPerson(res.totalPrice());
+                paymentProcessor = new InPersonPayment();
+                paymentProcessor.pay(res.totalPrice());
+                // paymentProcessor.payInPerson(res.totalPrice());
                 break;
         }
 
         System.out.println("----- INVOICE -----");
         System.out.println("hotel.Customer: " + res.customer.name);
-        System.out.println("hotel.Room: " + res.room.number + " (" + res.room.type + ")");
+        System.out.println("hotel.Room: " + res.room.getNumber() + " (" + res.room.getType() + ")");
         System.out.println("Total: " + res.totalPrice());
         System.out.println("-------------------");
 
