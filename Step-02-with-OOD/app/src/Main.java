@@ -3,12 +3,12 @@ import constants.Notifier;
 import models.Customer;
 import models.LuxuryRoom;
 import models.PoorRoom;
-import services.Reservation;
-import services.ReservationService;
+import reservation.Reservation;
+import reservation.ReservationService;
 
-import services.DiscountService;
-import services.InvoicePrinter;
-import services.NotificationService;
+import payment.DiscountService;
+import reservation.InvoicePrinter;
+import notification.NotificationService;
 public class Main {
     public static void main(String[] args) {
         Customer c1 = new Customer("Ali", "ali@example.com", "09124483765", "Paris");
