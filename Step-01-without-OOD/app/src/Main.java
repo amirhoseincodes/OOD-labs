@@ -1,29 +1,32 @@
 import constants.PaymentMethods;
+import constants.Notifier;
 import models.Customer;
 import models.LuxuryRoom;
 import models.PoorRoom;
-import constants.Notifier;
 import services.Reservation;
-import models.Room;
 import services.ReservationService;
 
+import services.DiscountService;
+import services.InvoicePrinter;
+import services.NotificationService;
 public class Main {
-    public static void main(String[] args){
-        Customer customer = new Customer("Ali", "ali@example.com","09124483765", "Paris");
-        Room room = new LuxuryRoom("203", 150);
-        Reservation res = new Reservation(room, customer, 2);
+    public static void main(String[] args) {
+        Customer c1 = new Customer("Ali", "ali@example.com", "09124483765", "Paris");
+        LuxuryRoom r1 = new LuxuryRoom("203", 150);
+        Reservation res1 = new Reservation(r1, c1, 2);
 
-        ReservationService service = new ReservationService();
-        service.makeReservation(res, PaymentMethods.PAYPAL, Notifier.EMAIL);
+        Customer c2 = new Customer("Amir", "amir@amirabad.com", "09102031510", "Amirabad");
+        PoorRoom r2 = new PoorRoom("108", 80);
+        Reservation res2 = new Reservation(r2, c2, 1);
 
-        System.out.println(); 
-        
-        // نمونه استفاده از قابلیت های جدید
-        Customer customer2 = new Customer("Amir", "amir@amirabad.com","09102031510","Amirabad"); //شخص جدید
-        Room room2 = new PoorRoom("108",80); // اتاق جدید
-        Reservation res2 = new Reservation(room2,customer2,1); // و رزرو جدید 
-        
-        // از همان سرویس رزرو قبلی استفاده می کنیم
-        service.makeReservation(res2, PaymentMethods.INPERSON, Notifier.SMS);
+        ReservationService service = new ReservationService(
+                new DiscountService(),
+                new InvoicePrinter(),
+                new NotificationService()
+        );
+
+        service.makeReservation(res1, PaymentMethods.PAYPAL, Notifier.EMAIL);
+        System.out.println();
+        service.makeReservation(res2, PaymentMethods.INPERSON, Notifier.EMAIL);
     }
 }
